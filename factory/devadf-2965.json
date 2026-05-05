@@ -1,0 +1,15 @@
+{
+	"name": "devadf-2965",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "56634abb-27b6-419c-9a4e-6e7bbfa5792a",
+		"tenantId": "8ee0f3e4-b788-4efa-bd84-e6bfe7fe9943"
+	}
+}
