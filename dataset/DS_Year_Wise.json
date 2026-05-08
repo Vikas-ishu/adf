@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().SourceFileName",
+					"type": "Expression"
+				},
 				"folderPath": "Year",
 				"container": "devadf2965"
 			},
