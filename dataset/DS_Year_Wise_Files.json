@@ -1,0 +1,45 @@
+{
+	"name": "DS_Year_Wise_Files",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Year_Wise",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SourceFileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Year",
+				"container": "devadf2965"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DATE",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT",
+				"type": "String"
+			},
+			{
+				"name": "SALES",
+				"type": "String"
+			}
+		]
+	}
+}
