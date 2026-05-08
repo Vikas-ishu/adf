@@ -5,6 +5,11 @@
 			"referenceName": "LS_Year_Wise",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"SourceFileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
