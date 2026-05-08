@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "devadf-2965"
+		},
+		"LS_ADLS_Copy_connectionString": {
+			"value": ""
+		},
+		"LS_ADLS_ORDER_accountKey": {
+			"value": ""
+		},
+		"LS_ASQL_DB_password": {
+			"value": ""
+		},
+		"LS_Additional_Col_ASQL_password": {
+			"value": ""
+		},
+		"LS_Additional_column_accountKey": {
+			"value": ""
+		},
+		"LS_Copy_data_adls_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_ORDER_properties_typeProperties_url": {
+			"value": "https://devadf2965.dfs.core.windows.net/"
+		},
+		"LS_ASQL_DB_properties_typeProperties_server": {
+			"value": "dev-adf-295.database.windows.net"
+		},
+		"LS_ASQL_DB_properties_typeProperties_database": {
+			"value": "devadf295"
+		},
+		"LS_ASQL_DB_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_Additional_Col_ASQL_properties_typeProperties_server": {
+			"value": "dev-adf-295.database.windows.net"
+		},
+		"LS_Additional_Col_ASQL_properties_typeProperties_database": {
+			"value": "devadf295"
+		},
+		"LS_Additional_Col_ASQL_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_Additional_column_properties_typeProperties_url": {
+			"value": "https://devadf2965.dfs.core.windows.net/"
+		},
+		"LS_Copy_data_adls_properties_typeProperties_url": {
+			"value": "https://devadf2965.dfs.core.windows.net/"
+		}
+	}
+}

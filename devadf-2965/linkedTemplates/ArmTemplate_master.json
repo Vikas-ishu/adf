@@ -1,0 +1,147 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "devadf-2965"
+		},
+		"LS_ADLS_Copy_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_ADLS_Copy'"
+		},
+		"LS_ADLS_ORDER_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_ORDER'"
+		},
+		"LS_ASQL_DB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_ASQL_DB'"
+		},
+		"LS_Additional_Col_ASQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_Additional_Col_ASQL'"
+		},
+		"LS_Additional_column_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Additional_column'"
+		},
+		"LS_Copy_data_adls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Copy_data_adls'"
+		},
+		"LS_ADLS_ORDER_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://devadf2965.dfs.core.windows.net/"
+		},
+		"LS_ASQL_DB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "dev-adf-295.database.windows.net"
+		},
+		"LS_ASQL_DB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "devadf295"
+		},
+		"LS_ASQL_DB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"LS_Additional_Col_ASQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "dev-adf-295.database.windows.net"
+		},
+		"LS_Additional_Col_ASQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "devadf295"
+		},
+		"LS_Additional_Col_ASQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"LS_Additional_column_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://devadf2965.dfs.core.windows.net/"
+		},
+		"LS_Copy_data_adls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://devadf2965.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "devadf-2965_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_ADLS_Copy_connectionString": {
+						"value": "[parameters('LS_ADLS_Copy_connectionString')]"
+					},
+					"LS_ADLS_ORDER_accountKey": {
+						"value": "[parameters('LS_ADLS_ORDER_accountKey')]"
+					},
+					"LS_ASQL_DB_password": {
+						"value": "[parameters('LS_ASQL_DB_password')]"
+					},
+					"LS_Additional_Col_ASQL_password": {
+						"value": "[parameters('LS_Additional_Col_ASQL_password')]"
+					},
+					"LS_Additional_column_accountKey": {
+						"value": "[parameters('LS_Additional_column_accountKey')]"
+					},
+					"LS_Copy_data_adls_accountKey": {
+						"value": "[parameters('LS_Copy_data_adls_accountKey')]"
+					},
+					"LS_ADLS_ORDER_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_ORDER_properties_typeProperties_url')]"
+					},
+					"LS_ASQL_DB_properties_typeProperties_server": {
+						"value": "[parameters('LS_ASQL_DB_properties_typeProperties_server')]"
+					},
+					"LS_ASQL_DB_properties_typeProperties_database": {
+						"value": "[parameters('LS_ASQL_DB_properties_typeProperties_database')]"
+					},
+					"LS_ASQL_DB_properties_typeProperties_userName": {
+						"value": "[parameters('LS_ASQL_DB_properties_typeProperties_userName')]"
+					},
+					"LS_Additional_Col_ASQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_Additional_Col_ASQL_properties_typeProperties_server')]"
+					},
+					"LS_Additional_Col_ASQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_Additional_Col_ASQL_properties_typeProperties_database')]"
+					},
+					"LS_Additional_Col_ASQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_Additional_Col_ASQL_properties_typeProperties_userName')]"
+					},
+					"LS_Additional_column_properties_typeProperties_url": {
+						"value": "[parameters('LS_Additional_column_properties_typeProperties_url')]"
+					},
+					"LS_Copy_data_adls_properties_typeProperties_url": {
+						"value": "[parameters('LS_Copy_data_adls_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
