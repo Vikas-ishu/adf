@@ -1,0 +1,28 @@
+{
+	"name": "PL_Load_For_Each",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"isSequential": true
+				}
+			}
+		],
+		"parameters": {
+			"Numbers": {
+				"type": "array",
+				"defaultValue": [
+					1,
+					2,
+					3,
+					4
+				]
+			}
+		},
+		"annotations": []
+	}
+}
