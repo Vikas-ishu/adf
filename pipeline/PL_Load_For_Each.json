@@ -8,7 +8,31 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"isSequential": true
+					"items": {
+						"value": "@pipeline().parameters.Numbers",
+						"type": "Expression"
+					},
+					"isSequential": false,
+					"batchCount": 2,
+					"activities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "l_number",
+								"value": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						}
+					]
 				}
 			}
 		],
@@ -21,6 +45,11 @@
 					3,
 					4
 				]
+			}
+		},
+		"variables": {
+			"l_number": {
+				"type": "Integer"
 			}
 		},
 		"annotations": []
